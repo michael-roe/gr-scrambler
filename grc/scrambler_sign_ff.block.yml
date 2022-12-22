@@ -1,0 +1,28 @@
+id: scrambler_sign_ff
+label: Sign Scrambler
+category: '[Scrambler]'
+templates:
+  imports: from gnuradio import scrambler
+  make: scrambler.sign_scrambler_ff(${mask}, ${seed}, ${len}, ${count})
+parameters:
+- id: mask
+  label: Mask
+  dtype: raw
+- id: seed
+  label: Seed
+  dtype: raw
+- id: len
+  label: Len
+  dtype: raw
+- id: count
+  label: Count
+  dtype: raw
+inputs:
+- label: in
+  domain: stream
+  dtype: float
+outputs:
+- label: out
+  domain: stream
+  dtype: float
+file_format: 1
